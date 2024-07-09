@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/5696719888.js" crossorigin="anonymous"></script>
+    <script src="./javascripts/sign_up.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/css_mereged.css">
+    <title>Cool signup page</title>
+</head>
+<body class="bod">
+
+        <div class="title-signUp">
+            <h1 class="title_text">Please Signup below</h1>
+        </div>
+
+        <div class="sign-up">
+            <h2>Please Sign-up below</h2>
+            <br>
+            <form id="signupForm">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Jhon" required>
+
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="first_name" placeholder="Doe" required>
+
+                <label for="email">Enter Email</label>
+                <input type = "text" id="email" name="email" placeholder="Jexample@outlook.com" required>
+
+                <label for="ID">Enter A vaild user ID</label>
+                <input type="text" id="ID" name="ID" placeholder="a1234567" required>
+
+                <label for="Phone">Phone Number</label>
+                <input type="text" id="Phone" name="Phone" placeholder="+61 XXX XXX XXX" required>
+
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name = "pass" placeholder="**********" required>
+                <br>
+                <label for="passcon">Confirm Password</label>
+                <input type="password" id="passcon" name = "passcon" placeholder="**********" required>
+
+                <div id="passwordValidationMsg"></div>
+                <input type="checkbox" id="updates" name = "passcon">
+                <label for="updates">Give me updates</label>
+                <br>
+                <input type="checkbox" id="acceptEULA" name="acceptEULA" required>
+                <label>I confrim I have read the <a href="https://youtu.be/xvFZjo5PgG0">Ts&amp;Cs</a> and I want to sign-up*</label>
+
+
+                <br>
+                    <input type="submit" value="Sign-up">
+                </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.bod{
+    background-color: palegreen;
+    background-image: url('../images/background.jpg');
+}
+
+.title{
+    background-color: white;
+    width: 450px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 1cm;
+    border-radius: 15px;
+
+}
+.title_failed{
+  background-color: red;
+  color:white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 1cm;
+  border-radius: 15px;
+
+}
+
+.title-signUp{
+  background-color: white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 0.5cm;
+  border-radius: 15px;
+
+}
+
+
+.log-in{
+  background-color: white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 3cm;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.sign-up{
+  background-color: white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 2cm;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.text-in{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color:black;
+    text-align: left;
+    margin-left: 10px;
+    border-radius: 15px;
+
+}
+
+.title_text{
+    text-align: center;
+
+}
+
+.button_colour{
+        background-color: #1e4f4e;
+        color:white;
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=submit] {
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .allignleft{
+
+    text-align: right;
+  }
+
+  .line{
+    color: lightgrey;
+  }
+
+  .signin_text{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .meetTheTeam{
+    text-align: center;
+  }
+
+  .log_in_failed{
+    background-color:red;
+    width: 450px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 3cm;
+    text-align: center;
+    border-radius: 15px;
+  }

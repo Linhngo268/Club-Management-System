@@ -1,0 +1,65 @@
+<!--MBS FILE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/club_manager_style.css">
+    <script src="./javascripts/events.js" defer></script>
+    <title>Edit the events</title>
+</head>
+<body>
+
+
+
+    <img src="https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/10326.jpeg?itok=0KCGrgVY" alt="Club Logo" style="position: absolute; top: 10px; right: 10px; width: 100px;">
+
+    <h2>The Ian Knight Appreciation Club</h2>
+
+    <div id="events">
+    <h2> Current Events</h2>
+    <ul>
+      <li >-Learning with Ian: Fridays at designated workshops, times vary<br>
+            -Ians birthday: 23rd May, 10am, meet at Hub<br>
+      -Lunch with Ian:December 2nd, 1 pm Barr Smith Lawns</li>
+    </ul>
+    <form id="event">
+        <label for="EventName">Name of event:</label>
+        <input type="text" id="EventName" name="EventName" placeholder="Event 1">
+        <br><br>
+        <label for="eventDate">When will it happen?</label>
+        <input type="datetime-local" id="eventDate" name="eventDate" placeholder="Date: DD/MM/YYYY">
+        <br><br>
+
+        <label for="eventLocation">Location of the event </label>
+        <input type="text" id="eventLocation" name="eventLocation"  placeholder="Where will it happen">
+
+        <br><br>
+        <label for="eventDetails">Plz describe event here</label>
+        <br><br>
+        <textarea id="eventDetails" name="eventDetails" rows="5" cols="100" placeholder="Describe thou events that will hapen here"></textarea>
+        <br><br>
+        <button type="submit">Save new events</button>
+    </form>
+
+</div>
+<br>
+    <div id="upadtes">
+        <h2>Current updates</h2>
+    <ol>
+      <li >Contributions: Club accepts contributions that help in arranging events. feel free to contribute in any way you can. you can do this using the box at the club house.</li>
+      <li> Birthday! Ians birthday is coming up, let us know of idas of how we can make it more special for him.</li>
+      <li>Recommendations required for cake and party arrangements </li>
+    </ol>
+
+    <form id="updatesF">
+        <p><label for="updates">Type the new updates</label></p>
+        <textarea id="updates" name="updates" rows="5" cols="100" placeholder="Type your updates here"></textarea>
+        <br>
+    <button type="submit">Save new updates</button>
+</form>
+</div>
+
+</body>
+</html>

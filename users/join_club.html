@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/css_mereged.css">
+    <title>My Account</title>
+
+  </head>
+  <body class="bodd">
+    <h1>Join Club Request</h1>
+    <form class="user_form">
+<!-- change name to first and last name -->
+      <label for="Firstname" >First Name:</label>
+      <input type="text" id="Firstname" name="Firstname" value="" readonly>
+      <label for="Lastname" >Last Name:</label>
+      <input type="text" id="Lastname" name="Lastname" value="" readonly>
+
+<!-- end change -->
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" value=" " readonly>
+
+
+  <label for="Current_password">Current password:</label>
+  <input type="password" id="Current_password" name="password"  value=" " readonly>
+
+  <!-- <label for="club">Current Club:</label>
+  <input type="text" id="current_club" name="current_club" value="Ian Knight Appreciation Club" readonly> -->
+
+  <label for="join_club">Join a new Club:</label>
+  <select id="join_club" name="join_club" >
+    <option value="">--Select a Club--</option>
+  </select>
+  <div>
+  <label id="reason" >Why do you want to join this club:</label>
+ <input type="text" >
+</div>
+
+
+  <input id='joinclub' type="submit" value="Submit">
+</form>
+<script src="./javascripts/join_club.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,3 @@
+client id: 935882304251-4ke8q66tvjaq51oqneb9ba9rln2ocntd.apps.googleusercontent.com
+
+cleitn secret: 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

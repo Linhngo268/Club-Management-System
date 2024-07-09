@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/club_man.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="javascripts/club_manager_mr_vue.js" defer></script>
+    <script src="javascripts/get_all_clubinfo_on_page_load.js"></script>
+    <title>Manager Mode</title>
+</head>
+
+<body id="app">
+    <!-- <img src="https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/10326.jpeg?itok=0KCGrgVY" alt="Club Logo" style="position: absolute; top: 10px; right: 10px; width: 100px;"> -->
+
+    <h1>Welcome to the club page Manager mode!</h1>
+    <h2>{{club_info.name}}</h2>
+
+    <p id="club-description" v-if="!editing_club_description"> {{club_info.description}}</p>
+
+    <textarea v-if="editing_club_description" v-model="edited_club_description"> {{club_info.description}} </textarea>
+    <br>
+
+    <button id="edit-description-button" v-if="!editing_club_description" type="button"
+        v-bind:onclick="edit_club_description_method">Edit
+        Description</button>
+    <button type="button" v-if="editing_club_description" v-bind:onclick="save_club_description_edits">Save
+        Changes</button>
+    <button type="button" v-if="editing_club_description" v-bind:onclick="cancel_club_description_edits">Cancel</button>
+
+    <h2>Events</h2>
+    <ul id="club-events" v-for="event_names in club_events">
+        <li>
+            <h3>{{event_names.name}}</h3>
+            <p>Happening: {{event_names.happening}}</p>
+            <p>{{event_names.description}}</p>
+        </li>
+
+    </ul>
+    <button id="edit-events-button" onclick="document.location='/club_manager/events.html'" type="button">Manage
+        Events</button>
+    <h2>Updates</h2>
+    <ol id="club-updates" v-for="event_updates in club_updates">
+        <li>
+            <h3>{{event_updates.name}}</h3>
+            <p>Posted: {{event_updates.posted}}</p>
+            <p>{{event_updates.description}}</p>
+        </li>
+    </ol>
+
+    <button id="edit-updates-button" onclick="document.location='/club_manager/events.html'" type="button">Manage
+        Updates</button>
+
+</body>
+
+</html>

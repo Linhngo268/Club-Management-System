@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/club_manager_style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="javascripts/club_manager_mr_vue.js" defer></script>
+  <title>RSVP LIST</title>
+</head>
+
+<body id="app">
+  <h1>Event RSVPs</h1>
+  <p>People who RSVP'd for the event are listed below:</p>
+  <ul id="rsvpList" v-for="rsvp_details in event_rsvps">
+    <li>{{rsvp_details.first_name}} {{rsvp_details.last_name}}</li>
+
+  </ul>
+  <p>Total people who RSVPd:{{event_rsvps.length}}</p>
+  <p>If you would like to RSVP for the event, please contact the club organizer.</p>
+</body>
+
+</html>

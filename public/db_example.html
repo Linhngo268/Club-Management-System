@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Database Interaction Example</title>
+    <script src="javascripts/db_example.js"></script>
+</head>
+
+<body>
+    <section>
+        <h2>Add User</h2>
+        <form id="add_user_form">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required><br><br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required><br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number" required><br><br>
+
+            <button type="button" onclick="db_example_submit()">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>All Users</h2>
+        <button type="button" onclick="db_example_reload()">Reload</button>
+        <ul id="db_example_all_users">
+        </ul>
+    </section>
+</body>
+
+</html>

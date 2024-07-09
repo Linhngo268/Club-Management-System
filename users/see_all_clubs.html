@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>WDC Group Project</title>
+    <meta charset="UTF-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/stylesheets/peter-style.css">
+    <!-- Our Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="javascripts/mr_vue.js" defer></script>
+    <!-- Javascripts -->
+    <script src="javascripts/get_all_clubs_on_page_load.js"></script>
+</head>
+
+<body id="app">
+    <header>
+        <h1>University Of Adelaide Clubs</h1>
+    </header>
+
+    <div class="content wrapper">
+        <section class="sign-in-up" v-if="!user_signed_in">
+            <button type="button" onclick="document.location='/signin_signup.html'" style="font-size: 1.2em;">
+                Sign In
+            </button>
+            <button type="button" onclick="document.location='/signup_page.html'" style="font-size: 1.2em;">
+                Sign Up
+            </button>
+        </section>
+        <section class="sign-in-up" v-if="user_signed_in">
+            <button type="button" onclick="document.location='/signin_signup.html'" style="font-size: 1.2em;">
+                Sign Out
+            </button>
+        </section>
+
+        <main>
+
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li>
+                        <button type="button" onclick="document.location='/main.html'">
+                            Main Page
+                        </button>
+                    </li>
+                    <li v-if="user_signed_in">
+                        <button type="button" onclick="document.location='/User_manage_account.html'">
+                            Manage Account
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div style="width: 100%; margin: 10px;">
+
+                <p>Search For: </p>
+
+                <!-- Input here will use vue to change which clubs will display -->
+                <input style="width: 80%" type="text" placeholder="All Clubs" v-model="clubs_to_display_search_term">
+
+                <div class="feed-container">
+
+                    <div class="feed">
+                        <div class="feed-title">
+                            <h3>{{ see_all_clubs_feed_title }}</h3>
+                            <hr>
+                        </div>
+
+                        <div class="feed-content">
+                            <!-- Populated with information from the server -->
+
+                            <div class="feed-entry" v-for="club_data in filtered_clubs">
+                                <!--
+                                    Links to specific club's page.
+                                    This link needs to be directed to the clubs page.
+                                -->
+                                <a v-bind:href="`users/club_page.html?club_id=${club_data.id}`">
+                                    <h3 v-html="highlightText(club_data.name, clubs_to_display_search_term)">
+                                        <span v-if="club_data.name"
+                                            v-html="highlightText('- ' + club_data.name, clubs_to_display_search_term)"></span>
+                                        .
+                                    </h3>
+                                </a>
+
+                                <p v-html="highlightText(club_data.description, clubs_to_display_search_term)">
+                                    <span v-if="club_data.description"
+                                        v-html="highlightText('- ' + club_data.description, clubs_to_display_search_term)"></span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+
+</body>
+
+</html>

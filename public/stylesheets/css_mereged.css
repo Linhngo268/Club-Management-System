@@ -1,0 +1,372 @@
+
+@import url("https://kit.fontawesome.com/5696719888.js");
+/*Marwan's css*/
+.bod{
+    background-color: palegreen;
+    background-image: url('../images/background.jpg');
+}
+
+.title{
+    background-color: white;
+    width: 450px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 1cm;
+    border-radius: 15px;
+
+}
+
+.title-signUp{
+  background-color: white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 0.5cm;
+  border-radius: 15px;
+
+}
+
+
+.log-in{
+    background-color: white;
+    width: 450px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 3cm;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.sign-up{
+  background-color: white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 2cm;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.text-in{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color:black;
+    text-align: left;
+    margin-left: 10px;
+    border-radius: 15px;
+
+}
+
+.title_text{
+    text-align: center;
+
+}
+
+.button_colour{
+        background-color: #1e4f4e;
+        color:white;
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+input[type=text], input[type=password], input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=submit] {
+    width: 150px;
+    background-color: #1e4f4e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #296b6d;
+  }
+
+  .allignleft{
+    text-align: right;
+  }
+
+  .line{
+    color: lightgrey;
+  }
+
+  .signin_text{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .meetTheTeam{
+    text-align: center;
+  }
+
+  /*LYN STYLE SHEET*/
+
+         /* Set global font size and color */
+         body {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Center main headings */
+        h1, h2 {
+            text-align: center;
+            top:300px;
+        }
+
+        /* Left-align subheadings */
+        h4 {
+            text-align: right;
+        }
+
+        /* Position account button in top right corner */
+
+
+        /* Style event and update boxes */
+        .event, .update {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #344948;
+            text-align: center;
+        }
+
+        /* Style reserve and donate buttons */
+        button {
+            color: white;
+            border: none;
+            background-color: #296b6d;
+            padding: 10px 20px;
+            font-weight: bold;
+            margin:0 auto;
+            display:block;
+        }
+
+        button:active {
+            text-decoration-line: underline;
+
+        }
+button:hover{
+    background-color: #296b6d;
+    cursor: pointer;
+}
+
+        /* Style footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #eee;
+        }
+        #account {
+            margin-left: 0;
+            margin-bottom: 10px;
+            margin-top: -80px;
+
+        }
+        #join{
+             margin-left: 0px;
+             margin-bottom: 50px;
+        }
+
+header {
+  background-color: #296b6d; /* sets the background color of the header */
+  color: black; /* sets the text color of the header */
+  padding: 10px; /* adds padding around the header content */
+  /* margin-top: 10px; */
+}
+
+nav ul {
+  list-style: none; /* removes the default bullet points for the list items */
+  margin: 0; /* removes default margin for the list */
+  padding: 0; /* removes default padding for the list */
+}
+
+nav li {
+  display: inline-block; /* sets the list items to display horizontally */
+}
+
+nav li a {
+  color: white; /* sets the text color of the links */
+  display: block; /* sets the links to display as block elements */
+  padding: 10px; /* adds padding around the link content */
+  text-decoration: none; /* removes the underline from the links */
+}
+
+nav li a:hover {
+  background-color: #296b6d; /* adds a background color to the link on hover */
+  text-decoration: underline;
+}
+/* #info{
+
+
+/* display: inline-block; */
+ /* float: right; */
+
+ #account-info {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#account-info p {
+  margin-left: 10px;
+  color: white;
+}
+
+p{
+    text-align: center;
+}
+
+.pchange{
+    color:white;
+}
+
+
+      /* html{
+        background-image: url('https://i.pinimg.com/736x/ec/4f/df/ec4fdf8d5c53c1aad7cdffc2487ec59f.jpg')
+      } */
+ .user_form {
+    border: 2px solid ;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #dfdede;
+    text-align: center;
+}
+
+.user_label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+/* color:rgb(115, 151, 118); */
+
+}
+#phone_number, #new_phone_number{
+  display: block;
+margin-bottom: 10px;
+font-weight: bold;
+
+width:485px;
+max-width: 500px;
+padding: 8px;
+}
+
+
+.center{
+    text-align: center;
+}
+
+ /* html{
+        background-image: url('https://i.pinimg.com/736x/ec/4f/df/ec4fdf8d5c53c1aad7cdffc2487ec59f.jpg')
+      } */
+
+/*changed the colorus*/
+body{
+    background-color:  #f4f4f4;
+
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bodd{
+    background-image: url('../images/background.jpg');
+}
+
+
+.icon{
+  font-size:24px;
+}
+
+
+.allign{
+  text-align: middle;
+}
+
+.title_failed{
+  background-color: rgba(233, 66, 66, 0.795);
+  color:white;
+  width: 450px;
+  padding: 5px;
+  margin: auto;
+  margin-top: 1cm;
+  border-radius: 15px;
+
+}
+
+
+.error-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #296b6d;;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.close-button {
+  margin-top: 10px;
+}

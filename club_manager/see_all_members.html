@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/club_manager_style.css">
+	<script src="javascripts/clubmanagerseeall.js"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="javascripts/club_manager_mr_vue.js" defer></script>
+	<title>Club Members VISUAL</title>
+
+</head>
+
+<body id="app">
+	<h1>Club Members</h1>
+	<form>
+		<label for="search">Search by name:</label>
+		<input type="text" id="search" name="search" onkeyup="searchTable()" placeholder="Enter name...">
+	</form>
+
+
+	<table id="memberTable">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+
+			</tr>
+		</thead>
+		<tbody v-for="member_details in club_members">
+			<tr>
+				<td>{{member_details.first_name}} {{member_details.last_name}}</td>
+				<td>{{member_details.email}} </td>
+				<td>{{member_details.phone_number}}</td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+
+</body>
+
+</html>

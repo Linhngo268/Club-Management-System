@@ -1,0 +1,104 @@
+<!-- Peter Burgess -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WDC Group Project</title>
+    <meta charset="UTF-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/stylesheets/peter-style.css">
+    <!-- Our Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="javascripts/mr_vue.js" defer></script>
+    <!-- Javascripts -->
+    <script src="javascripts/get_all_club_events_updates_on_page_load.js"></script>
+</head>
+
+<body id="app">
+    <header>
+        <h1>University Of Adelaide Clubs</h1>
+    </header>
+
+    <div class="content wrapper">
+        <section class="sign-in-up" v-if="!user_signed_in">
+            <button type="button" onclick="document.location='/signin_signup.html'" style="font-size: 1.2em;">
+                Sign In
+            </button>
+            <button type="button" onclick="document.location='/signup_page.html'" style="font-size: 1.2em;">
+                Sign Up
+            </button>
+        </section>
+        <section class="sign-in-up" v-if="user_signed_in">
+            <button type="button" onclick="document.location='/signin_signup.html'" style="font-size: 1.2em;">
+                Sign Out
+            </button>
+        </section>
+
+        <main>
+
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li v-if="!user_signed_in">
+                        <button type="button" onclick="document.location='see_all_clubs.html'">
+                            View All Clubs
+                        </button>
+                    </li>
+
+                    <li v-if="user_signed_in">
+                        <button type="button" onclick="document.location='see_all_clubs.html?logged_in=true'">
+                            See All Clubs
+                        </button>
+                    </li>
+
+                    <li v-if="user_signed_in">
+                        <button type="button" onclick="document.location='./users/manage_account.html'">
+                            Manage Account
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="feed-container">
+
+                <div class="feed">
+                    <div class="feed-title">
+                        <h3>Update Feed</h3>
+                        <hr>
+                    </div>
+
+                    <div class="feed-content">
+                        <!-- Populated with information from the server -->
+                        <div class="update feed-entry" v-for="update_info in updates_to_display">
+                            <h4>{{ update_info.name }}</h4>
+                            <p>{{ update_info.description }}.</p>
+                            <p class="date-time">{{ update_info.posted }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="feed">
+                    <div class="feed-title">
+                        <h3>Events Feed</h3>
+                        <hr>
+                    </div>
+
+                    <div class="feed-content">
+                        <!-- Populated with information from the server -->
+                        <div class="event feed-entry" v-for="event_info in events_to_display">
+                            <h4>{{ event_info.name }}</h4>
+                            <p class="date-happening">{{ event_info.happening }}</p>
+                            <p>{{ event_info.description }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

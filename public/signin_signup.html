@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<!--Marwan's Files -->
+<!--FInal updates-->
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/5696719888.js" crossorigin="anonymous"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script src="../public/javascripts/submuit.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Pgae OwO</title>
+    <link rel="stylesheet" href="stylesheets/css_mereged.css">
+</head>
+
+<body id="app" class="bod" >
+    <!--the title div-->
+    <div class="title">
+        <h1 class="title_text">Welcome to the Club's LinkedIn</h1>
+    </div>
+
+    <div id="errorPopup" class="error-popup">
+        <div class="error-content">
+          <span id="errorMessage"></span>
+          <button type="button" id="closeErrorPopup" class="close-button">Close</button>
+        </div>
+      </div>
+
+
+    <div class="log-in">
+        <h2>Please Log-in below</h2>
+        <br>
+        <form id="loginForm">
+            <label for="UserName">User Name or Email: </label>
+            <input type="text" id="UserName" name="UserName" placeholder="Email goes here">
+            <label for="Passowrd">Passowrd: </label>
+            <input type="password" id="Passowrd" name="Passowrd" placeholder="Password...">
+
+            <br>
+            <input type="checkbox" id="remember_me" name="remember_me">
+            <label for="remember_me">Keep me signed in</label>
+
+            <br>
+            <input type="submit" value="Sign-in">
+        </form>
+        <!--links the two pages together-->
+        <a href="./signup_page.html">
+            <h4>Dont have an account?</h4>
+        </a>
+        <a href="./reset_password.html" class="allignleft">
+            <h4>Forgot your passowrd?</h4>
+        </a>
+
+        <hr class="line">
+
+        <p class="signin_text">Sign in with this instead</p>
+
+<div class="allign">
+        <div id="g_id_onload"
+        data-client_id="935882304251-4ke8q66tvjaq51oqneb9ba9rln2ocntd.apps.googleusercontent.com"
+        data-context="signin" data-ux_mode="popup" data-callback="do_google_login" data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_black"
+        data-text="signin_with" data-size="large" data-logo_alignment="left" >
+    </div>
+</div>
+            <a href="https://www.youtube.com/watch?v=STzK1XrpoBs&ab_channel=HexFax"><p>Meet The team &copy;</p></a>
+    </div>
+
+    <script src="./javascripts/submuit.js"></script>
+</body>
+
+</html>

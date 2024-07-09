@@ -1,0 +1,134 @@
+/* Peter Burgess */
+header {
+    text-align: center;
+}
+
+.content {
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.sign-in-up {
+    text-align: center;
+}
+
+.sign-in-up button {
+    font-size: 1.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    margin: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    order: 0;
+    width: min(20%, 200px);
+    text-align: center;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 1em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feed-container {
+    /* Contains multiple feeds */
+    order: 1;
+    width: 100%;
+    /* Make them auto fit to the page size */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 20px;
+    /* So they do not stick to the left border */
+    margin: 10px;
+}
+
+.feed {
+    /* Contains feed title and feed content */
+
+    /* Our beautiful wall */
+    border: 3px solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 1em;
+
+    /* COLOURS */
+    background-color:#ffffff ;
+    background-clip: border-box;
+}
+
+.feed-title {
+    text-align: center;
+}
+
+.feed-content {
+    /* The specific content for a feed */
+    padding: 10px;
+
+    overflow: auto;
+
+    overflow: auto;
+    max-height: calc(100vh - 300px);
+}
+
+.feed-entry {
+    margin: 5px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #69a4a7;
+    background-clip: border-box;
+}
+
+.date-time {
+    font-size: 0.8em;
+}
+
+.titleColour{
+    color: white;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+button{
+    background-color: #205355;
+    cursor: pointer;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+
+}
+
+button:hover{
+    background-color: #296b6d;
+    cursor: pointer;
+}
+
+hr{
+    color:#77a0a1;
+}
+
+body{
+    background-image: url('../images/background.jpg');
+}

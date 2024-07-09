@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/stylesheets/css_mereged.css">
+  <script src="/admin/javascripts/add_new_admin.js" defer></script>
+    <title>WDC Group Project - Create new admin</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body class="bodd">
+  <h1>Create new admin</h1>
+    <form class="user_form" id="new_admin">
+
+        <label for="first_name"> First name:</label>
+        <input type="text" id="new_admin_first_name" name="name" required><br>
+        <label for="last_name"> Last name:</label>
+        <input type="text" id="new_admin_last_name" name="name" required><br>
+        <label for="name"> User Name:</label>
+        <input type="text" id="new_admin_username" name="username" required><br>
+        <label for="ID"> IS_ADMIN (0/1) </label>
+        <input id="admin_id" type="text" name="ID" required>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  required><br>
+
+
+
+        <input type="submit" value="Create new admin">
+
+      </form>
+
+    </body>
+    </html>

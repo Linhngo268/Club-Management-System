@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/css_mereged.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="javascripts/users_mr_vue.js" defer></script>
+
+  <!-- <script src="javascripts/club-pages.js"></script> -->
+  <script src="javascripts/get_all_club_info_on_page_load.js"></script>
+
+  <title>Viewing Club</title>
+</head>
+
+<body id="app">
+
+  <div id="account-info">
+    <p> <span id="email"></span></p>
+    <br>
+    <p> <span id="user_id"></span></p>
+  </div>
+
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="manage_account.html">Manage Account</a></li>
+        <li><a href="join_club.html">Join a new club</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <h1>{{club_info.name}}</h1>
+
+  <p id="description">{{club_info.description}}</p>
+
+  <h2>Events</h2>
+
+  <div class="event" v-for="event_info in club_events">
+    <div class="event-entry">
+      <p id="eventOne" class="pchange">
+        <span id="id" class="eventid" style="display:none">{{event_info.id}}</span>
+        <span id="name">{{event_info.name}}</span><br>
+        <span id="when"> {{event_info.happening}} </span><br>
+        <span id="describe"> {{event_info.description}} </span><br>
+      </p>
+      <button
+  onclick="showPopup( )"
+  type="submit"
+  class="reserve"
+  @click="sendEmail(event_info.id,event_info.name,event_info.happening,event_info.description)"
+>
+  Reserve
+</button>
+
+    </div>
+
+  </div>
+
+  <h2>Updates</h2>
+  <div v-for="update_info in club_updates">
+
+    <div class="update">
+      <p class="pchange">
+        {{update_info.name}}
+        <br>
+        {{update_info.description}}
+        <br>
+        {{update_info.posted}}
+      </p>
+    </div>
+
+  </div>
+
+  <!-- create pop up page for reserve button -->
+  <div id="popup" class="popup">
+    <div class="popup-content" style="color:brown">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <p>You have reserved for <span id="time-now"> </span></p>
+    </div>
+  </div>
+
+  <footer>
+    <a style="color:black" href="https://www.geeksforgeeks.org/quick-sort/?ref=gcse">Contact us</a>
+    <p>WDC group008 &copy;</p>
+    <p>All Right Reserved</p>
+  </footer>
+
+</body>
+
+</html>

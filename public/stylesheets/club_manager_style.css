@@ -1,0 +1,102 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #1e4f4e;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+p, li {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    background-color: #1e4f4e;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    ;
+}
+
+button:hover {
+    background-color: #3d7c7b;
+}
+
+
+/*Sammer's css*/
+
+th {
+	background-color: #1e4f4e;
+	font-size: 18px;
+	color: white;
+	padding: 8px;
+}
+td {
+	font-size: 16px;
+	padding: 8px;
+}
+table {
+	border: 1px solid #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+form label {
+font-weight: bold;
+font-size: 18px;
+}
+h1 {
+text-align: center;
+background-color: #1e4f4e;
+font-size: 36px;
+color: white;
+padding: 10px;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-spacing: 0;
+}
+tr:hover {
+    background-color: #F2F2F2;
+}
+input[type=text] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: #1e4f4e;
+}
+input[type=submit] {
+background-color: #1e4f4e;
+color: white;
+border: none;
+padding: 8px;
+border-radius: 4px;
+cursor: pointer;
+}

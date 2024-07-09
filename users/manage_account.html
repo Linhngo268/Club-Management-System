@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/css_mereged.css">
+
+    <title>My Account</title>
+    <style>
+
+
+
+
+
+</style>
+  </head>
+  <body class="bodd">
+    <h1>Manage Account</h1>
+    <div class="center">
+    <form class="user_form" id="manageAccount">
+
+
+      <!-- change the user_manage_account to first_name, Last_name, username/id, email, phone_number, password -->
+
+<!-- change name to first name and last name -->
+      <label class="user_label" for="first name" >First name</label>
+      <input class="form_input" type="text" id="first-name" name="name" value=" " readonly>
+      <label class="user_label" for="last name" >Last Name</label>
+      <input class="form_input" type="text" id="last-name" name="name" value=" " readonly>
+
+      <label class="user_label" for="new_first_name">New First Name</label>
+      <input class="form_input" type="text" id="new_first_name" name="new_name" placeholder="Enter your new first name (optional)">
+
+      <label class="user_label" for="new_last_name">New Last Name</label>
+      <input class="form_input" type="text" id="new_last_name" name="new_name" placeholder="Enter your new last name (optional)">
+<!-- end changes -->
+  <label  class="user_label" for="username">Username</label>
+  <input  class="form_input" type="text" id="username" name="username" value=" " readonly>
+
+  <label  class="user_label" for="new_username">New Username</label>
+  <input class="form_input"  type="text" id="new_username" name="new_username" placeholder="Enter your new username (optional)">
+  <label  class="user_label" for="id">ID</label>
+  <input  class="form_input" type="text" id="id" name="username" value=" " readonly>
+
+<!-- change the stylesheet for this as i want number instead of text -->
+  <label class="user_label"  for="phone_number">Phone Number</label>
+  <input   type="text" id="phone_number" name="phone_number"  value=" " readonly>
+
+  <label class="user_label"  for="new_phone_number">New Phone Number</label>
+  <input  type="text" id="new_phone_number" name="phone_number"  placeholder="Enter your new phone numnber (optional)">
+
+  <label class="user_label"  for="email">Current Email</label>
+  <input   type="text" id="email" name="email"  value=" " readonly>
+
+  <label class="user_label"  for="new_email">New email</label>
+  <input  type="text" id="new_email" name="new_email"  placeholder="Enter your new email (optional)">
+
+
+  <label  class="user_label" for="Currrent_password">Current password:</label>
+  <input   type="password" id="Current_password" name="password"  value=" " >
+
+  <label class="user_label"  for="new_password">New password:</label>
+  <input  type="password" id="new_password" name="password"  placeholder="Enter your new password (optional)">
+
+
+
+  <!-- <label for="club">Current Club:</label>
+  <input type="text" id="current_club" name="current_club" value="Ian Knight Appreciation Club" readonly> -->
+
+  <!-- <label for="join_club">Join a Club:</label>
+  <select id="join_club" name="join_club">
+    <option value="">--Select a Club--</option>
+    <option value="club1">Club 1</option>
+    <option value="club2">Club 2</option>
+    <option value="club3">Club 3</option>
+  </select> -->
+
+  <input class="submit" type="submit" id="save" value="Save">
+</form>
+</div>
+<script src="javascripts/manage_account.js"></script>
+</body>
+
+</html>
+
+
+

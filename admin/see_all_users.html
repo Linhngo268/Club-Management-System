@@ -1,0 +1,91 @@
+<!-- Peter Burgess -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WDC Group Project Admin</title>
+    <meta charset="UTF-8">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/stylesheets/peter-style.css">
+    <!-- Our Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="javascripts/admin_mr_vue.js" defer></script>
+    <!-- Javascripts -->
+    <script src="javascripts/get_all_users_on_page_load.js"></script>
+</head>
+
+<body id="app">
+
+    <header>
+        <h1>University Of Adelaide Clubs Admin</h1>
+    </header>
+
+    <div class="content">
+
+        <main>
+
+            <nav>
+                <h3>Navigation</h3>
+                <ul>
+                    <li>
+                        <button type="button" onclick="document.location='/main.html'">
+                            Main Page
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="document.location='/users/manage_account.html'">
+                            Manage Account
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="document.location='/admin/add_new_admin.html'">
+                            Add new admin
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div style="width: 100%; margin: 10px;">
+
+                <p>Search For: </p>
+
+                <!-- Input here will use Vue to change which users will display -->
+                <input style="width: 80%" type="text" placeholder="All Users" v-model="users_to_display_search_term">
+
+                <div class="feed-container">
+
+                    <div class="feed">
+                        <div class="feed-title">
+                            <!-- Links to the input box maybe? -->
+                            <h3>{{ see_all_users_feed_title }}</h3>
+                            <hr>
+                        </div>
+
+                        <!--
+                            I feel like there is a lot of wasted space here.
+                            This could be split into multiple columns.
+                            The amount of them depending on the width of the screen.
+                            However that will make things harder to find.
+                        -->
+                        <div class="feed-entry" v-for="user_data in filtered_users">
+                            <h3
+                                v-html="highlightText(user_data.first_name, users_to_display_search_term) + ' ' + highlightText(user_data.last_name, users_to_display_search_term)">
+                                <span v-if="user_data.username"
+                                    v-html="highlightText('- ' + user_data.username, users_to_display_search_term)"></span>
+                                .
+                            </h3>
+                            <button type="button" style="margin-bottom: 10px;">Manage User</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
